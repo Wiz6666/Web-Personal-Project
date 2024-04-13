@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- 设置文档的字符编码为UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 视口设置为设备宽度，缩放比例为1 -->
+    <title>Weisi Zhang</title> <!-- 网页标题 -->
+    <!-- 引入Bootstrap的CSS文件 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container mt-5"> <!-- container类用于居中和边距管理，mt-5为上边距 -->
+        <header class="mb-4"> <!-- header部分，mb-4为下边距 -->
+            <h1>Hyperlinks Concept</h1> <!-- 主标题 -->
+        </header>
+        <nav> Main Page About me History of Hyperlinks Biography</nav>
+        <main>
+            <div class="row">
+                <h3>What is hyperlink?</h3>
+            </div>
+            <div class="row"> <!-- 使用row类定义一行，用于布局控制 -->
+                <div class="col-6 text-left"> <!-- col-6定义列宽占总宽度的50%，用于文本 -->
+                    <p>Hyperlinks, commonly known as links, serve as navigational gateways, allowing users to click and
+                        move to different pieces of digital content. Think of a hyperlink as a bridge connecting one bit
+                        of information to another. The linked text, often highlighted, is called anchor text, and it’s
+                        what you click to jump to the linked content.</p>
+                    <p>Hypertext is simply text laced with these links. With the right software, you can view and create
+                        this web of connections. When you click on a link, you're taking a path through this web,
+                        exploring connected information.</p>
+                </div>
+                <div class="col-6"> <!-- col-6定义另一半宽度，用于图片 -->
+                    <img src="Hyperlink1.jpg" alt="Cannot load img successfully" class="img-fluid" width=80% height=80%>
+                    <!-- 引入图片，img-fluid使图片响应式 -->
+                </div>
+            </div>
+            <div class="row"> <!--这里第二块内容-->
+                <div class="col-6"> <!--这里塞入银翼杀手视频 interlink!!-->
+                    <video width=100% height=100% controls loop>
+                        <source src="interlinked.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="col-6 text-left">
+                    <p>
+                        Consider the text you read online, like on Wikipedia or Google Search. Words within the text
+                        might be linked to
+                        other pages explaining them in detail. Links are the building blocks of digital references,
+                        often found in
+                        contents pages, glossaries, and bibliographies, creating a network of information.
+                    </p>
+                    <p>
+                        Some links are two-way streets — you can go back and forth between the linked content. Others
+                        form a more
+                        intricate map, allowing multiple paths to and from various pieces of information.
+                    </p>
+
+                </div>
+            </div> <!-- 这里塞入第二段文字-->
+            <div class="row text-left">
+                <p>
+                    On the web, clicking a link usually means the new page will load where you are, although
+                    sometimes a link might
+                    open a new tab or window. Some links might even bring in content right where you are, seamlessly
+                    integrating new
+                    information into your current view.
+                </p>
+                <p>
+                    Automated programs like web crawlers also use hyperlinks to navigate and index the web, creating
+                    maps of this
+                    digital terrain for search engines to use.
+                </p>
+                <p>
+                    In summary, hyperlinks are the threads that weave the vast tapestry of the web, allowing us to
+                    journey from one
+                    piece of content to another, building our understanding and knowledge as we go.
+                </p>
+            </div>
+
+            <div class="row">
+                <h3>The Role of Anchor Tags in Hyperlinks</h3>
+            </div>
+            <div class="row">
+                <div class="col-6 text-left">
+                    <p>
+                        The anchor tag, delineated by <a> in HTML, is more than just a snippet of code — it's the very
+                            scaffolding upon which the web is built. Every click on a hyperlink is a leap, a decision to
+                            journey from
+                            one piece of content to another, charting a path across the digital landscape.
+                    </p>
+                    <p>Hyperlinks are akin to digital synapses, connecting discrete blocks of information to form a
+                        cohesive, navigable
+                        structure. When you encounter an <a> tag, it's not just a link — it's an invitation to explore.
+                            The
+                            href
+                            attribute within it holds the URL, a unique address leading to endless knowledge and
+                            discovery.
+                    </p>
+                    <p>But the <a> tag's versatility doesn't end with external adventures. It also offers a way to
+                            navigate
+                            through the
+                            current document with anchor points, allowing for a smooth and organized user experience. A
+                            link
+                            such as <a href="#section2">Jump to Section 2</a> becomes a bridge to another section of the
+                            page, often utilized
+                            in long articles or tutorials to improve navigability.
+                    </p>
+                </div>
+                <div class="col-6">
+                    <img src="Hyperlink2.jpg" alt="Cannot load img successfully" width=90% height=90%>
+                </div>
+            </div>
+            <div class="row text-left">
+                <p>Furthermore, the design and behavior of hyperlinks can be enriched using CSS and JavaScript. CSS lets
+                    you style
+                    hyperlinks to match the aesthetic of the website, be it through color, font, or animation.
+                    JavaScript, on the
+                    other
+                    hand, can intercept the click event to enhance functionality. For instance, instead of immediately
+                    jumping to a
+                    new
+                    page, JavaScript can initiate a pop-up confirmation, an animated transition, or even dynamically
+                    load new
+                    content
+                    without needing to refresh the page.
+                </p>
+                <p>
+                    Through these interactive layers, the <a> tag transcends its basic function, becoming an integral
+                        part of the
+                        user's journey through your digital content. It is the starting point of their adventure, the
+                        conduit
+                        through which they engage with the content, and the guidepost leading them to their next
+                        destination. In
+                        essence, every hyperlink encapsulates a potential path of inquiry, learning, or entertainment —
+                        it is up to
+                        the web developer to craft these pathways thoughtfully and to the web user to follow them
+                        wherever they may
+                        lead.
+                </p>
+            </div>
+            <div class="row">
+                <h4>For example:</h4>
+            </div>
+            <div class="row text-left">
+                <ul>
+                    <li>
+                        Linking to an external site: <a href="https://www.example.com">Visit Example.com</a></li>
+                    <li>
+                        <Navigating to an internal page: <a href="/about.html">About Us</a>
+                    </li>
+                    <li>
+                        Jumping to a page section: <a href="#contact">Jump to Contact Section</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <h3>HTTP Requests: The invisible Handshake</h3>
+            </div>
+            <div class="row">
+                <div class="col-12 text-left">
+                    <p>When you click a hyperlink, you initiate what's called an HTTP GET request. This process is like
+                        a friendly
+                        exchange
+                        where the browser (acting on behalf of the user) reaches out to the server hosting the linked
+                        resource. Here's
+                        how it
+                        works step-by-step:</h3>
+                    <p>
+                        <strong>Initiation:</strong> user clicks a link, which is an anchor (<a>) tag in HTML. This
+                            action triggers the
+                            browser to send a GET
+                            request to the server.
+                    </p>
+                    <p>
+                        <strong>Dispatch:</strong> The browser sends this request using the URL specified in the
+                        hyperlink’s href
+                        attribute. This URL
+                        tells the server what resource the user wants to access, whether it's a webpage, image, video
+                        file, etc.
+                    </p>
+                    <p>
+                        <strong>Server Response:</strong> server receives the request and processes it. It checks if the
+                        requested
+                        resource is available and
+                        accessible.
+                    </p>
+                    <p>
+                        <strong>Feedback with Status Codes:</strong>The server then responds back to the browser with
+                        the requested
+                        content (if available) and a
+                        status code. These status codes are standard HTTP codes reflecting the outcome:
+                </div>
+            </div>
+            <div class="row text-left">
+                <ul>
+                    <li>
+                        <p><strong>'200 OK:'</strong> request was successful, and the server is sending the requested
+                            content.</p>
+                    </li>
+                    <li>
+                        <p><strong>301 Moved Permanently:</strong> resource has been moved to a new URL, and the server
+                            is
+                            redirecting the browser to that
+                            location.</p>
+                    </li>
+                    <li>
+                        <p><strong>404 Not Found:</strong> server couldn’t find the requested resource.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="row text-left">
+                <p>
+                    <strong>Result Rendering:</strong> browser receives the server's response. If the content was
+                    successfully
+                    retrieved, the browser
+                    will display it; if redirected, the browser will follow the new URL; if an error occurred (like a
+                    404), it might
+                    display
+                    an error message.
+                </p>
+                <p>
+                    This handshake between the browser and the server is fundamental to web navigation, enabling users
+                    to move
+                    seamlessly
+                    from one resource to another across the internet.
+                </p>
+            </div>
+
+            <div class="row">
+                <h3>Bring Links to Life with JavaScript and jQuery</h3>
+            </div>
+            <div class="row text-left">
+                <p>While the basic functionality of hyperlinks is to navigate from one page to another, JavaScript and
+                    jQuery can
+                    supercharge these links with additional behaviors and interactive elements.</p>
+                <p>
+            </div>
+            <div class="row text-left">
+                <ul>
+                    <li>
+                        <strong>Dynamic Interactivity:</strong> JavaScript allows you to modify hyperlink behavior
+                        dynamically. For
+                        example, you can set up
+                        scripts so that when users hover over a link, they see more detailed information about where the
+                        link will
+                        take them
+                        without leaving the page.
+                    </li>
+                    <li>
+                        <strong>AJAX for Seamless Experiences:</strong> (Asynchronous JavaScript and XML) lets you fetch
+                        content
+                        from a server and update
+                        parts of a web page without reloading the whole page. This technique is essential for creating
+                        fluid,
+                        app-like web
+                        experiences. For instance, clicking on a link could load new content into the current page's
+                        section
+                        directly, enhancing
+                        user experience by reducing load times and maintaining page state.
+                    </li>
+                </ul>
+            </div>
+            <div class="row text-left">
+                <h4>Example of AJAX with jQuery</h4>
+            </div>
+            <div class="row text-left">
+                <p>$('a.myLink').click(function(event){
+                    event.preventDefault(); // Prevent the default hyperlink action
+                    var loadURL = $(this).attr('href'); // Extract the URL from the link
+                    $('#contentArea').load(loadURL); // Load the content into a specific part of the page
+                    });
+                </p>
+                <p>This script prevents the default link action, fetches the content from the link's href, and loads
+                    that content
+                    into a
+                    div with the ID contentArea. This process enhances user interaction without the jarring effects of
+                    full page
+                    reloads.</p>
+                <p>By leveraging these technologies, developers can create more engaging and user-friendly web
+                    experiences that go
+                    beyond
+                    simple page navigation, incorporating rich interactions and smooth transitions. These techniques are
+                    part of
+                    what makes
+                    modern web development so dynamic and responsive to user needs.</p>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

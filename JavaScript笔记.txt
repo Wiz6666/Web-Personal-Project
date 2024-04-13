@@ -1,0 +1,883 @@
+前端:
+结构: html
+表现: CSS
+行为: JavaScript
+
+
+HTML:
+    语法规范:
+     按!然后按tab键
+     双标签 <html></html>
+     单标签 <br/>
+     标签关系:
+        包含关系 标签里面套标签
+        并列关系 都是某个标签的子标签
+    
+    <html></html> 根标签
+    <head></head> 头部标签
+        lang指语言; charset字符集一般是UTF-8 
+    <title></title> 在头部标签里面, 网页标题
+    <body></body> 网页内容
+
+    快捷键:
+    按tab生成标签
+    重复多个标签使用* 号, div*3 生产3个
+    父子关系标签, ul>li
+    兄弟关系标签, div+p
+    带有类名或者id的标签
+    #名 生成<div id="名“></div>
+    p.名 生成<p class="名"></p>
+    .demo$*5 生成    <div class="demo1"></div>
+                    <div class="demo2"></div>
+                    <div class="demo3"></div>
+                    <div class="demo4"></div>
+                    <div class="demo5"></div>
+    标题标签:
+        <h1> - <h6> h6标题最小,标题会独占一行
+        <p></p> 段落标签;段落之间有空隙; 根据窗口尺寸自动调整文本
+        <br/> 换行, 强制换行
+    文本格式化标签: 
+        <strong></strong> <b></b> 加粗
+        <em></em> <i></i> 倾斜
+        <del></del> <s></s> 删除线
+        <ins></ins> <u></u> 下划线
+
+    块元素:
+        占一行, 高度宽度外内边距都能控制, 宽度默认是容器100% 里面可以放行内或者块元素除了p和h1~6不行
+        <h1>~<h6>; <p>; <div> <ul> <ol><li>
+    行内元素:
+        一行可以写多个, 宽高不能直接设置, 默认就是自己本身宽度, 里面只能收纳文本 或者其他行内元素
+        <a> <strong> <b> <em> <i> <del> <s> <span>
+    行内块 元素:
+        可以写在一行, 但会有空白缝隙, 默认高度是自己高度, 高度宽度内外边距都能设置
+        <img> <input> <td>
+    元素显示模式转换:
+        display: block 变成块元素
+        display:inline 变成行内元素
+        display:inline-block 行内块元素
+
+
+
+
+    HTML常用标签:
+        <div>：division缩写, 分割分区 独占一行 大盒子
+        <span>：是跨度跨距的意思 不会独占一行 用于内联元素的通用容器 , 小盒子
+    图像标签:
+        <img src="URL" alt="替换文本" title="提示文本" width=“写数字” height=“” border=“” 图像边框粗细/> 
+    超链接标签:
+        <a href="跳转目标的url" target="窗口弹出方式_self是默认,_blank是新窗口"> 文本或者图像</a> 这里指anchor锚
+        如果是内部链接比如我别的html文件, 直接写名字.html,注意目录就行
+        下载链接 href地址是文件或者压缩包会下载文件
+        空链接 href=“#” 
+        锚点链接: 变到网页的某些地方, 比如返回顶部 href=“#名字” 在别的地方设定属性id=“名字”
+    注释标签:
+        <!--  注释写这里  -->
+    特殊字符:
+        空格键 &nbsp; 小于号&lt; 大于号&gt; 正负号&plusmn; 乘号times; 除号&divide; 平方&sup2;
+    表格标签:
+        <
+        table
+        algin:left/center/right
+        border:1 或 “” 1代表有边框
+        cellpadding: 规定单元 边缘与内容的空白,默认1px
+        cellspacing 规定单元格之间空白,默认2px
+        width 规定表格宽度
+        height 高度
+        >
+            <thead> 可以不写,指表头
+                <tr> 指表格中的一行
+                    <th> 名字</th> 第一行表头的单元格, 会加粗剧中显示
+                    <th> 性别</th>
+                    <th> 电话</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr> 指表格中的一行
+                    <th> 文本1</th> 标准单元格
+                    <th> 文本2</th>
+                    <th> 文本3</th>
+                </tr>
+                <tr> 
+                    <tf> 文本1</tf> 最后一行的单元格
+                    <tf> 文本2</tf>
+                    <tf> 文本3</tf>
+                </tr>
+            </tbody>
+        </>
+        <th> 表头单元格, 和thead是两个东西
+        <thead>: （可选）用于包含表格头部的行（即标题行）。
+        <tbody>: （可选）用于包含表格主体的行。
+        <tfoot>: （可选）用于包含表格底部的行。
+        合并单元格:
+            跨行合并: <td rowspan=“合并单元格的个数”></td> 由左到右 由上到下, 所以在最初要合并的地方写
+            夸列合并:<td colspan=“合并单元格的个数”></td>
+
+    列表标签:
+        无序列表: 列表会按照小圆点显示
+            <ul> 里面只能写li,都是并列的无等级区分
+                <li></li> 但是li可以放所有元素
+                <li></li>
+                <li></li>
+            </ul>
+        有序列表: 列表中会按照数字显示
+            <ol>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        自定义列表: 前面没符号数字
+            <dl>
+                <dt>名词1</dt>
+                <dd>名词1解释1</dd>
+                <dd>名词1解释2</dd>
+            </dl>
+
+    表单标签: 用来收集信息
+        分为表单域<form>、表单控件(表单元素)、提示信息
+        <form action="demo.php" method="POST" name="name1"> 这三会传数据回服务器, 后面再学
+            用户名:<input type="text" name="userName"> <br>
+            密码:<input type="password" name="passWord"> <br>
+            // name是命名, 只有相同名字, radio type才能多选一
+            性别: 男<input type="radio" name="gender"> 女 <input type="radio" name="gender">
+
+
+        </form>
+
+        <input> 输入表单
+                <input type = 'text'>
+                button：定义可点击的按钮（通常不提交表单）。
+                password：定义密码字段，输入字符被掩码。
+                radio：定义单选按钮，允许用户从多个选项中选择一个选项。
+                reset：定义重置按钮，会将所有表单字段重置为初始值。
+                checkbox：定义复选框，允许用户从多个选项中选择多个选项。
+                color：定义颜色选择器，允许用户选择颜色。
+                date：定义日期控件，允许用户选择日期。
+                datetime-local：定义日期和时间控件，允许用户选择本地日期和时间。
+                email：定义用于 e-mail 地址的字段，带有内置验证以检查 e-mail 地址的格式是否有效。
+                file：定义文件选择字段和“浏览”按钮，供文件上传。
+                hidden：定义隐藏的输入字段。
+                image：定义图像形式的提交按钮。
+                month：定义月份和年份控件，无时间区域选择。
+                number：定义用于输入数字的字段，带有控件来增减数字。
+                range：定义用于输入一定范围内数字值的控件，通常显示为滑动条。
+                search：定义用于搜索的文本字段，可能包括清除按钮或其他装饰。
+                submit：定义提交按钮，提交表单到服务器。
+                tel：定义用于输入电话号码的字段，带有内置验证以检查输入的值是否是电话号码格式。
+                text：定义单行的输入字段，用户可以在其中输入文本。
+                time：定义时间控件，允许用户选择时间（无时区）。
+                url：定义用于输入 URL 的字段，带有内置验证以检查输入的值是否是 URL 格式。
+                week：定义周和年份控件，无时间区域选择
+                别的元素: name 定义input元素名字
+                        value=“” 提示符淡灰色“请在此输入~”类似这种
+                        checked = “checked” 规定此元素首次加载就应该被选中
+                        maxlength 规定输入字段最大长度
+            <label>：定义<input>元素的标签，提高可访问性。点击label的文本, 浏览器自动把鼠标转到对应元素
+                比如点男/女的文本, 也能触发小圆点选中
+                label中for属性应该和id属性一样
+                <label for="sex">男</label>
+                <input type="radio" name="sex" id="sex"/>
+
+        <select> 下拉表单,可以选择省份地区等等
+            <select>
+                <option selected="selected" 提前选中>选择1</option>
+                <option>选择2</option>
+                <option>选择3</option>
+                <option>选择4</option>
+            </select>
+        <textarea> 文本框
+                <textarea name="message" rows="10" cols="50">
+                这里是默认文本（如果需要的话）。
+
+    
+
+
+
+CSS:
+常见有3种选择器
+    1. 元素选择器, 直接元素名字加大括号
+        h1 {color:red;}
+    2. 类选择器, 前面加点 (可以很多个元素都用一个)
+        .box {color:green;}
+    3. ID选择器, 前面加井号 (只能用于一个元素)
+        #box {color:red;}
+
+选择器可以叠加层级
+    例子:
+        .parent .child{ color:grey;}
+        或者写成
+        .parent{
+            .child{
+                color:grey;
+            }
+        }
+        <div class = "parent">
+            <div class = "child">   //只有这里会用到色彩变灰, 满足先用parent 内层用child
+            </div>
+        </div>
+    例子:
+        ol li {
+            color: bule
+        }
+        ol li a {
+            color:red
+        }
+        <ol>
+            <li>这里会变成蓝色</li>
+            <li> <a href="#">这里会变成红色</a></li>
+        </ol>
+    也可以复合使用,比如:
+    .footer ul li a //用footer属性的内容里的ul的li里的a
+
+
+
+一个html元素可以用多个 空格分开就行
+    <div class = "yellow text-bold high-light"> content </div>
+    包含选择器:
+        元素1 元素2{样式声明}
+    子级选择器:
+        元素1 > 元素2 {样式声明}
+        div >p {样式声明} 选择div里面最近的子集关系的p 调整
+    并集选择器:
+        元素1, 元素2 {样式声明}
+    伪类选择器:
+        a:link 选择所有未访问的链接
+        a:visted 选择所有 已经访问的链接
+        a:hover 选择鼠标指针在上面的链接
+        a:active 选择活动链接,鼠标按下去但没弹起
+        input:focus 有光标, 被选中的填写框 (可以改颜色强调哪个框被选中)
+
+        
+CSS装修颜色:
+    color 文本颜色
+    background-color 背景颜色
+    border-color 边框颜色
+    opacity: 0到1 调节整个元素的透明度
+    rgba(数字,数字,数字,0到1) 最后一个是调节颜色透明度
+    Custom color via RGB or HEX:
+        .rgb {color: rgba:235,70,224,0.5);} //设置文本颜色和透明度0.5
+        .hex (color : #eb46e0)
+
+CSS装饰文本:
+
+    font-family 字体属性(幼圆, 楷书那些,可以逗号分隔写很多个, 防止浏览器不支持字体)
+    font-size: 多少px 文字大小
+    font-style: 控制 字体风格normal, italic斜体, oblique也是斜体
+    font-weight: 字体粗细
+    text-decoration: underline下划线  overline上划线 line-through删除线
+    text-algin: 文本水平对齐方式 left right center justify两端对齐
+    line-height: 多少px 行高
+CSS装饰背景:
+    background-color: transparent或者写color数值
+    background-image: none或者url() 背景图片
+    background-repeat: 背景平铺 repeat | non-repeat不能平铺 | repeat-x |repeat-y沿着y轴平铺
+    background-position:x y| bottom| top | center|left|right 控制图片在背景的位置
+        比如: background-position: top 那就是y轴顶部对齐, x轴默认居中,因为x轴没有top这种名词
+CSS装饰盒子模型:
+由外到内是: margin边距 然后 border边框 然后padding填充 最后是body本体部分
+    .box-model {
+        /* 整个盒子的宽高
+        width: 80px;
+        height:100px;
+        /*顺序是上; 右;下;左的边距, 然后配上散点虚线黑色边框
+        margin:12px 8px 24px 16px dotted black; 
+        /* 边框距离, 其次是边框颜色
+        border: 2px solid rgb(235,70,224,0.5); 
+    }
+
+CSS影响页面布局
+display: none或者block等等;
+    none:
+        设置为 display: none; 的元素不会在页面上显示，并且不占据空间。它完全从文档流中移除。
+    block:
+        块级元素（如 <div>）默认的 display 值是 block。
+        这些元素会在新行开始，并且尽可能地填满其父元素的水平空间。
+    inline:
+        内联元素（如 <span>）默认的 display 值是 inline。
+        这些元素不会开始新行，它们只占据必要的宽度。
+    inline-block:
+        结合了 inline 和 block 的特性。
+        元素不会开始新行，但可以设置宽度和高度。
+    flex:
+        用于创建弹性盒子布局。设置为 flex 的元素成为弹性容器，其子元素会成为弹性项。
+        弹性容器提供了对子元素在一维（行或列）上的对齐、顺序和大小的强大控制。
+    grid:
+        用于创建网格布局。设置为 grid 的元素成为网格容器，其子元素自动成为网格项。
+        网格容器允许定义行和列，创建一个二维布局系统。
+    table、table-row、table-cell 等:
+        用于模拟 HTML 表格的行为。这在 CSS 布局中不太常见，通常只在特定的布局需求中使用。
+    inline-flex:
+        将元素作为内联弹性容器显示。它的行为类似于 flex，但该元素本身会作为内联元素布局。
+    inline-grid:
+        将元素作为内联网格容器显示。它的行为类似于 grid，但该元素本身会作为内联元素布局
+
+弹性布局flex:
+    .flex{
+        flex-grow:
+            定义子元素的放大比例。默认为 0，即如果存在剩余空间，也不放大。
+        flex-shrink:
+            定义子元素的缩小比例。默认为 1，表示如果空间不足，该项目将缩小。
+        flex-basis:
+            定义子元素在分配多余空间之前的默认大小。默认值为 auto，即子元素的原始大小。
+        flex:
+            是 flex-grow、flex-shrink 和 flex-basis 的简写。常用的值有 0 1 auto（默认）和 1 0 auto。
+        align-self:
+            允许单个子元素有不同于容器的 align-items 值。这可以用来单独调整某个子元素的对齐方式
+    }
+网格布局grid:
+    .grid{
+        display:grid;
+        grid-template-rows: 100px 200px 300px; 每一行占多少px
+        grid-template-columns: 1fr 2fr; 
+        /*fr 单位代表网格容器中可用空间的一部分（fraction）
+        1fr 表示可用空间的一份，2fr 表示两份。因此，第一列的宽度是第二列的一半
+        grid-row-start 和 grid-row-end:
+            定义网格项在网格行中的起始和结束位置。
+        grid-column-start 和 grid-column-end:
+            定义网格项在网格列中的起始和结束位置。
+        grid-area:
+            用于同时设置 grid-row-start、grid-column-start、grid-row-end 和 grid-column-end。
+        grid-template-areas:
+            定义一个或多个区域的名称，并将网格项放置在这些区域中。
+        grid-gap:
+            定义行与列之间的间隙。可以单独指定 row-gap 和 column-gap。
+        justify-items:
+            控制网格项在单元格内沿着行轴（水平轴）的对齐方式。
+        align-items:
+            控制网格项在单元格内沿着列轴（垂直轴）的对齐方式。
+        justify-content:
+            控制整个网格在网格容器内沿着行轴的对齐方式。
+        align-content:
+            控制整个网格在网格容器内沿着列轴的对齐方式。
+        grid-auto-columns 和 grid-auto-rows:
+            为隐式网格项（即那些没有明确放入特定网格行或列中的项）设置默认大小。
+        grid-auto-flow:
+            控制如何自动放置未明确定位的网格项，例如 row、column 或 dense
+    }
+
+
+CSS的定位
+    有四种 statics 静态定位(默认) relative相对定位 abolute绝对定位 fixed 固定定位
+    static（静态定位）:
+        这是所有元素的默认定位方式。
+        静态定位的元素按照常规文档流进行布局，即它们的位置是根据其在 HTML 中的位置决定的。
+        设置为 static 的元素不能通过 top、bottom、left 或 right 属性进行位置调整。
+    relative（相对定位）:
+        相对定位的元素首先按照静态定位放置，然后根据 top、right、bottom 和 left 属性相对于其原始位置进行偏移。
+        相对定位不会改变元素在文档流中的占位，即使它被偏移了。
+    absolute（绝对定位）:
+        绝对定位的元素脱离了常规文档流，因此不占据任何空间。
+        它们的位置相对于最近的已定位（非 static）祖先元素进行定位。如果没有已定位的祖先元素，则相对于初始包含块（通常是 <html> 元素）。
+        使用 top、right、bottom 和 left 属性来指定位置。
+    fixed（固定定位）:
+        固定定位的元素脱离常规文档流，并相对于浏览器窗口进行定位。所以一般都是顶部导航栏之类的
+        它们不会随着滚动条滚动而移动，常用于创建固定在页面上的元素，如固定导航栏。
+        同样使用 top、right、bottom 和 left 属性来指定位置。
+    相关属性:(写像素px或者用%都行)
+        top:
+            控制元素的顶部边缘与其最近已定位祖先元素的顶部的距离。对 static 定位无效。
+        bottom:
+            控制元素底部边缘与其最近已定位祖先元素的底部的距离。对 static 定位无效。
+        left:
+            控制元素左边缘与其最近已定位祖先元素的左边的距离。对 static 定位无效。
+        right:
+            控制元素右边缘与其最近已定位祖先元素的右边的距离。对 static 定位无效。 
+        z-index:
+            当元素重叠时，z-index 决定它们的堆叠顺序。具有更高 z-index 值的元素会覆盖较低 z-index 值的元素。
+        position:
+            用于设置元素的定位类型（static, relative, absolute, fixed）
+    例子:
+        .relative{
+            position: relative;
+            height:200px;
+            background-color:violet;
+        }
+        .absolute{
+            position:absolute;
+            right:0;
+            bottom:0;
+            //指在右下角
+        }
+        <div class = "relative"> 
+            <div class = "absolute">
+            content// 这里可以用绝对定位, 让内容在外面紫色方框的右下角
+            </div>
+        </div>
+
+
+
+
+JavaScript 基础语法
+
+JavaScript组成
+    |- ECMAScript js的基础语法核心
+    |- Web APIs
+        |- DOM 操作文档 对页面元素移动大小添加删除等
+        |- BOM 操作浏览器, 页面弹窗 检测窗口宽度 储存数据到浏览器等
+
+
+JS三种书写位置
+    内部,外部,行内
+    书写的位置尽量写到</body> 前面
+    外部js标签中间不要写代码,否则会被忽略
+
+JS 的注释用"//" 或者"/* */"
+
+JS的语法 \
+    输出的语法
+    document.write("要输出在网页的文本")
+    alert('要弹出警告框的内容')
+    console.log('控制台打印')   //控制台输出语法,程序员调试使用 会生成网页Console日志
+    输入的语法
+    prompt('请输入您的名字:') 
+    代码的执行顺序: 按文档流顺序执行JavaScript代码; alert()和prompt()会跳过页面渲染先被执行
+    [ ] 是数组 { }是对象
+
+
+JS的变量
+    变量本质就是内存中放入一个储存数据的空间
+    let 变量名 //创建变量
+    变量名 = 赋值量
+    let 变量名 = 赋值量 //js允许声明变量+赋值变量同时进行
+    模版字符串中使用的时候是`反引号内 ${变量名}`
+    变量的规则:
+    数字不能开头;只能用下划线字母数字 $ 组成; 不能是特殊意义字符比如let var if for
+    道德层面规范:
+    小驼峰(第一个单词小写后面大写userName) / 大驼峰(Username)
+    var let和const都是变量声明 但是首先排除 var 问题很多太老了
+    let 和 const优选const 因为 const语义化更好,且100%不变
+    实际开发中比如用 react框架 基本const
+    可以先用const 写变量, 如果后面发现要改再调成let
+JS的常量
+    不允许改值,声明时必须赋值
+    const G = 9.8 //declare一个常量
+    console.log(G)
+
+JS的数组
+    let 数组名 = [数据0,数据1,数据2,数据3,.....,数据n]
+    JS用负数索引没有用,只能0到n-1,可以用 数组名[数组名.length -1]
+
+    访问数组: 数组[下标]
+    修改赋值: 数组[下标] = 新值
+    添加新值: array.push(元素1,,,,,元素n)//添加1或者多元素到末尾返回数组新长度     
+            arr.unshift(新增内容) //一样,但是放在开头
+        例子:
+
+    删除数据 
+        arr.pop()      //删除最后一个元素, 返回该元素的值
+        arr.shift()    //删除第一个元素
+        arr.splice(起始位置start,刷出多少元素deleteCount不写就是后面都删了)
+
+数据类型
+    数字类型Number
+        整数,小数,正负数
+    js是弱数据类型的语言.java是强数据类型的语言
+        java 中int num =10 那么以后就必须是整数.赋值前就设定是什么数据类型
+        如果js 中 let num = 'pink', 只有赋值了才知道是什么数据类型.
+        NaN 代表计算错误,是粘性的,与NaN相关的运算结果都是NaN
+    弱数据类型语言导致的坑
+        使用表单/prompt 获取的数据默认字符串,没办法直接加减乘除
+
+    模版字符串
+    没有模版之前拼接数字和字符麻烦:
+    document.write('大家好,我叫' + name+ ',今年' + age + '岁')
+    语法`` 数字1左边的按键
+    document.write(`我今年${age}岁`)
+
+    布尔 ture和false
+    undefined 如果只声明没赋值就是输出这个
+    null 空(算赋值,尚未创建的对象)
+    可以通过 typeof  x 或者 typeof(x)检测数据类型
+
+数据转换
+    隐式转换Implicit Conversion: JS自己改写数据格式
+    let result = '3' +2 结果会是5
+    显示转换Explicit Conversion: 我们人为强制要求数据格式转换
+    let num = Number('123')
+    console.log(parseInt('12.94px')) 结果是12
+    console.log(parseFloat('12.94px)) 结果是12.94
+    
+简单类型数据: 储存值的本身,比如string number boolean undefined null
+复杂类型数据: 储存变量时只存地址(引用),所以也叫引用数据类型 
+            比如 object array data
+栈(操作系统): 操作系统自动分配放入内存.放简单的数据类型 比如函数
+            的参数值; 局部变量的值
+堆(操作系统): 储存复杂类型(对象),一般程序员分配释放,否则垃圾回收
+            机制回收
+    
+常用的css装饰语法:
+    颜色背景:
+        color: 设置文本颜色
+        background-color: 设置元素的背景颜色
+        background-image: 背景放图片
+    文本样式:
+        font- family: 设置文字字体
+        font-size: 设置文字大小
+        font-weight: 文本的粗细 (normal, bold)
+        text- decoration: 文本装饰(underline 下划线)
+        text-transform: 改变文本大小写(uppercase,lowercase)
+    布局和定位:
+        margin: 元素外边距
+        padding:元素内边距
+        border: 元素边框
+        width height: 元素宽度高度
+        position:元素定位方式(relative,absolute,fixed)
+    盒模型:
+        box-shadow: 元素添加阴影效果
+        border-radius: 元素边框的圆角
+    伪类和伪元素:
+        :hover:定义鼠标悬停元素时的样式
+        ::before 和::after 在元素前后插入内容/装饰
+    响应式设计:
+        @media 根据不同屏幕尺寸/设备用不同的样式规则
+    动画和过度:
+        transition: 为元素的某些属性变化添加过度效果
+        @keyframes 或者animation 创建复杂动画效果
+
+运算符(都差不多我这速通跳过)
+    |-赋值运算符
+        = 赋值; += -= *= /= %=
+    |- 一元运算符
+        自增++; 自减--
+        前置自增let i = 1  然后++i
+        后置自增let i = 1 然后i++
+    |- 比较运算符
+        >; <; >=; <=; ==数值相等; === 类型和数字都相等
+        !== 两边不全等
+    |- 逻辑运算符
+        && 并且 num>5 && num<10
+        || 或者 
+        ! 非 !false
+    |- 优先级: 小括号, 然后一元运算符, 然后算数运算发, 然后关系运算符>< 然后相等运算符== !=, 然后逻辑运算符&& ||
+
+JavaScript表达式和语句
+    表达式 num = 1+2
+    语句: alert() console.log()
+    程序员三大控制语句: 
+        1顺序结构按照上到下去跑 
+        2分枝结构满足条件/不满足跑的不一样 
+        3循环结构 不断循环代码
+
+    单分支语句:
+    if (condition){ 
+    }
+
+    双分支语句:
+    if(condition){
+    }else{
+    }
+
+    多分支语句:
+    if(condition1){}else if (condition2){}else if (condition3){}else{}
+
+    使用三元运算符执行满足条件的语句:
+    条件 ? 满足条件执行的代码: 不满足条件执行的代码 
+    例子: console.log( 3>5? ’真的‘:’假的‘)
+            let sum = 3<5 ? 3:5
+    
+    switch(){
+        case Value1: //这里是===, 必须完全一样
+            Code1
+            break
+        case Value2:
+            Code2
+            break
+        default:
+            Coden
+            break
+    }
+
+    Switch语句通常处理值比较确定的情况, Value1234都是固定的,  分支多的时候用switch效率高, 分支少用if效率高 
+循环语句:
+    断点调试:
+    浏览器- 检查- Sources,点击断开的行, 刷新界面就能测试
+    while循环:
+    while(condition){
+        code i need to loop
+    }
+
+    没有终止条件, 容易死循环, 可以condition说i < 5
+    break 指完整退出循环, continue指退出本次循环
+    
+    循环语句:
+        for(变量起始值;终止条件;变量变化量){
+            //循环体
+        }
+        
+        for (let i = 1; i <= 3; i++) {
+            document.write('hello')
+        }
+
+        也一样使用continue 跳过单次循环, 或者break 完全退出循环
+        while(true) 是无限循环, 或者for(;;)也行
+
+        let i = 0;
+        while (i < 5) {
+            console.log("While 循环的迭代数: " + i);
+            i++;
+        }
+
+
+        let j = 0;
+        do {
+            console.log("Do-While 循环的迭代数: " + j);
+            j++;
+        } while (j < 5);
+
+        let arr = ['苹果', '香蕉', '樱桃'];
+        for (let fruit of arr) {
+            console.log("当前水果: " + fruit);
+        }
+
+函数
+    function 函数名字(参数1,,,,参数n 可以没有参数){
+        内容
+        return 内容 //可以不写return语句;return下面的代码都不执行
+    }
+
+    let 函数名字 = function (){ //此处为匿名函数,一般是很简单的小函数懒得写名字,也能防变量污染
+        内容
+    }
+//函数里面的变量 不影响外面使用, 所谓的作用域的“局部作用域”
+//函数外面的变量, 主体的变量是“全局作用域”
+//很坑的一点: 函数内部,变量没声明直接使用赋值,会作为全局变量(强烈不推荐)
+    如何立马秒执行匿名函数:
+    写法1:
+        ( function (){} ) ()
+    写法2:
+        (function () {} ()  )
+    例子:
+    (function(){
+            console.log(`秒执行`)
+        }) ()
+
+对象(object) js特殊的数据类型
+    let 对象名字 = {}
+    let 对象名字 = new Object() 
+    使用对象:
+        console.log(obj.age)
+        console.log(obj['age']) //这样也行
+    修改对象:
+        对象名字.属性 = 新值
+    新增对象:
+        对象名字.新属性 = 新值
+    删除对象:
+        delete 对象名字.属性
+    遍历对象:
+        for (let i in object){
+            console.log(i) //这会输出文本的键key的名字
+            console.log[i] //这就能输出每个键的内容
+            console.log(students[i].hometown) //输出所有学生的家乡这个键的信息
+        }
+
+    例子:
+        let obj = {
+            uname: 'Weisi',
+            age:24,
+            gender: 'male'
+            sayHi: function (){   //这叫对象内的方法,这里不叫函数
+                document.write('hi~~') 
+            }
+        }
+
+内置对象:
+    document.write就是一个典型内置对象, js自己自带的对象
+    Math 也是
+    Math.random() 返回0和1之间的随机浮点
+    Math.round() 四舍五入
+    Math.PI 返回圆周率
+    类似的有:
+    ceil 向上取整
+    floor 向下取整
+    max, min, pow幂运算 abs绝对值
+
+
+
+
+
+
+WEB API基础
+    使用js操作浏览器和html,分为DOM文档对象模型 BOM浏览器对象模型
+    主要就是学dom 和bom
+    此处再次展示框架
+    JavaScript组成
+    |- ECMAScript js的基础语法核心
+    |- Web APIs
+        |- DOM 操作文档 对页面元素移动大小添加删除等
+        |- BOM 操作浏览器, 页面弹窗 检测窗口宽度 储存数据到浏览器等
+        之前学的prompt()alert()都属于BOM里面
+    DOM document Object Model 文档对象模型
+        用js操作网页内容, 开发网页内容特效, 实现用户交互
+    DOM树
+        把html文档用树状结构展示, 称为DOM树 或者文档树
+    DOM对象
+         浏览器根据html标签生成的js对象
+        所有的标签属性都可以在这个对象上面找到
+        我们可以利用对象的属性来 访问/操作网页内容
+        比如: DOM最大的对象是document也就是整个网页, document.write()就是一个属性在里面写字 
+        总之DOM 的核心思想就是 把网页内容当做对象处理
+
+
+1.使用DOM获取;修改元素
+    使用CSS选择器获取DOM元素
+        选择匹配的第一个元素: document.querySelector('css选择器')
+        想获取所有匹配的元素，应该使用 document.querySelectorAll,此时得到的是伪数组,把每个元素塞起来,能做循环,但是不能加减内容
+
+        例子:
+            <style> .box {width:200px; height:200px;}</style>
+            <body>
+                <div class="box">123</div>
+                <div id="box">abc</div>
+                <ul>
+                    <li>测试1</li>
+                    <li>测试2</li>
+                    <li>测试3</li>
+                </ul>
+                <script>
+                    const box = document.querySelector('div')
+                    //这里会选择所有div元素的第一个div,也就是输出文本123的
+                    const box = document.querySelector('#box')
+                    //这里会选择id= box的第一个元素
+                    //如果是选择class = box,使用‘.box’
+                    const li = document.querySelector('ul li:first-child')
+                    //选择列表的第一个
+                    CSS 提供了多种选择器来帮助定位元素，比如 :last-child、:first-child 以及 :nth-child(这里写数字)
+                </script>
+            </body>
+
+            例子:
+                <script>
+                    <ul>
+                        <li>Test1</li>
+                        <li>Test2</li>
+                        <li>Test3</li>
+                    </ul>
+                    const list = document.querySelectorAll('ul li')
+                    for (let i =0; i< list.length; i++){
+                        console.log(list[i]) 
+                        //这样可以便利每个li,打印每一个
+                    }
+                </script>
+
+    使用DOM修改元素
+        我们可以修改元素里的内容,做出动态效果比如商城优惠倒计时;抽奖改文本姓名
+        对象.innerText 属性 
+        对象.innerHTML 属性
+
+        修改元素属性:常见属性有href,title,src等等
+        直接对象后面加点然后属性名调整
+        <img src="./images/1.webp" alt="">
+        <script>
+            const img = document.querySelector('img')
+            const random = (Math.floor(Math.random() * 6))
+            img.src = `./images/${random}.webp`
+            img.title = 'Photo XD QAQ'  //哪怕本身没有title元素, 也能直接加上去
+        </script>
+        
+        修改元素样式属性
+        对象.style.样式属性=''
+        如果需要修改很多的样式属性, 为了方便我们可以
+        const div = document.querySelector('div')
+        div.className = 'box' //把div的类名换成.box 的style <div class=box'>
+        .box 已经提前调整好了所有的样式, 所以直接换类名就行
+        但是为了解决className容易覆盖以前的类名, 可以:
+        //追加一个类 (假设第一个类名处理长宽, 第二个处理色彩, 可以追加但是不会覆盖删除第一个处理长宽的类)
+        元素.classList.add(‘类名’)
+        //删除一个类
+        元素.classList.remove(‘类名‘)
+        //切换一个类
+        元素.classList.toggle(’类名‘)
+
+    使用DOM修改表单数据
+        比如秘密的显示和不显示, 全选后表格全部打勾 
+    标准的表单格式:
+    <input type="text" value="请输入">
+    <button disabled>点击</button>
+
+    <script>
+        //获取元素
+        const userName = document.querySelector('input')
+        //获取值
+        console.log(userName.value) //不能使用innerHTML的到值,比较特殊
+        //修改值
+        uname.value = ’我要改变值‘
+        userName.type = 'password' //这样的话输入内容是黑点
+
+        //打勾元素
+        const ipt = document.querySelector('input')
+        ipt.checked = true //可以让框打勾
+        //获取按钮元素
+        const button = document.querySelector('button')
+        //禁用按钮,按钮变灰色
+        button.disabled = true 
+    </script>
+
+    用DOM自定义属性
+    第一种是标准属性, 标签天生自带的, 比如class id title,可以直接使用.语法 比如.disabled, .checked, .selected
+    第二张是自定义属性,写一个自己的属性, 一律 data- 开头,用dataset对象方式获取
+        <body>
+        <div data-id=="1" data-spm="Haha">1</div>
+        <div data-id=="2">2</div>
+        <div data-id=="3">3</div>
+        <div data-id=="4" >4</div>
+        <div data-id=="5" >5</div>
+        <script>
+            const div = document.querySelector('div')
+            console.log(one.dataset)
+        </script>
+        </body>
+    
+    用DOM做定时器
+        间歇函数:使用定时器重复执行代码
+        //1. 开始定时器 setInterval(函数名字或者function(){},间隔时间单位毫秒)
+            setInterval(function(){
+                console.log('hello')
+            },1000)
+            写外面也行
+            function fn(){console.log('hello')}
+            setInterval(fn,1000)
+            定时器会返回数字,let i = setInterval(********)
+            console.log(i)可以得到数字
+        //2.关闭定时器
+            let 变量名 = setInterval(函数,间隔时间)
+            clearInterval(变量名)
+2.DOM 注册事件,tab栏切换
+    事件就是 发生的动作或者发生的事情, 比如点击播放轮播图, 鼠标经过显示下拉菜单
+    事件源: dom元素被事件触发了,要获取dom元素
+    事件类型: 鼠标单击click, 鼠标经过mouseover
+    事件调用: 做什么事
+    //1.添加事件
+    元素对象.addEventListener(‘事件类型’,要执行的函数)
+    //2.事件类型
+        鼠标事件: click鼠标点击, mouseenter鼠标经过, mouseleave鼠标离开
+        焦点事件: focus获得焦点, blur失去焦点
+        见刊事件: Keydown 键盘按下出发, Keyup键盘抬起触发
+        文本事件:input 用户输入事件
+    //3.事件对象
+        可以把事件赋予变量名字, 做相应的操作. 这里事件对象的变量名字就是e
+        元素.addEventListener('click',function(e){})
+        部分常用属性:
+        type:事件的类型
+        clientX/clientY 获取光标相对于左上角的位置
+        offsetX/offsetY 获取光标相对于当前DOM元素左上角的位置
+        key 用户按下的键盘键的值,现在不提倡使用keyCode
+        input.addEventListener('keyup',function(e){
+            if (e.key === 'Enter'){
+                console.log('我按下了回车键')
+            }
+        })
+    //4.环境对象, 指特殊变量this, 代表用这个函数时调用的对象,直接调用的函数会指向window
+        例子: 让按钮变色
+        const btn = document.querySelector('button')
+        btn.addEventListener('click',function(){
+            this.style.color  = 'red'
+        })
+    //5.回调函数
+        把函数A 作为参数 传递函数B, 那么函数A就是回调函数
+        比如setInterval(fn, 100) 这里fn就是回调函数
+3.DOM事件进阶;事件对象 事件委托
+ 
+4.DOM 节点 增删改查
+
+5.BOM 操作浏览器 本地存储,插件
+
+6.正则表达式;
