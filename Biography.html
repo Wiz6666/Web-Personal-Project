@@ -4,59 +4,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About me</title>
+    <title> Biography - Weisi </title>
+    <!-- Link to bootstrap & my CSS file -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 
 <body>
-    <h1>biography</h1>
-    <p>Weisi Zhang SID:23210735</p>
-    <p></p>
-    <h2>Bio</h2>
+    <div class="container mt-5">
+        <header class="mb-4">
+            <h1>Biography</h1>
+            <nav>
+                <a href="/main.html" target="_blank" style="color: white;">
+                    Main_Page
+                </a> |
+                <a href="/Hyperlinks_concept.html" target="_blank " style="color: white;">
+                    Hyperlinks_Concept
+                </a> |
+                <a href=" /main.html" target="_blank" style="color: white;">
+                    History_of_Hyperlinks
+                </a> |
+                <a href="/Biography.html" target="_blank" style="color: white;">
+                    About_me
+                </a>
+            </nav>
+        </header>
 
-    <h2>Connect</h2>
-    <p>Email: weisizhang7777@gmail.com</p>
-    <p>GitHub: <a href="">Wiz6666</a></p>
-    <p>LinkedIn: <a href="">Weisi Zhang</a></p>
+
+        <br>
+        <main>
+            <div class="row">
+                <p></p>
+                <br><br>
+
+            </div>
+
+            <div class="row">
+                <h3>Bio</h3>
+            </div>
+            <div class="row">
+                <div class="col-6 text-left">
+                    <p>
+                        <strong>Weisi Zhang:</strong> I'm a master's student in information technology with a strong
+                        academic record. I have experience with a wide range of programming languages, including HTML,
+                        JavaScript, CSS, Python,Java,Linux Terminal, and Bash, R language. In past projcets, I have
+                        focused on front-end web site design and data analysis.
+                    </p>
+                </div>
+                <div class="col-6">
+                    <img src="champ1.jpeg" class="img-fluid" id="currentImg" width="80%" height="80%">
+                    <div><button id="nextImage">Next Image</button></div>
+
+                </div>
+            </div>
+            <!-- Connect -->
+            <div class="row">
+                <h3>Connect</h3>
+            </div>
+            <div class="row">
+                <div class="col-6 text-left">
+
+                    <p>Email: weisizhang7777@gmail.com</p>
+                    <p>GitHub: <a href="https://github.com/Wiz6666">Wiz6666</a></p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/weisi-zhang-8ab783288/">Weisi Zhang</a></p>
+
+                </div>
+                <div class="col-6">
+                    <img id="waifuImage" src="placeholder.jpg" alt="Waifu Image" width="300"><br>
+                    <button id="loadWaifu">Next Waifu</button>
+                </div>
+            </div>
 
 
-    <h2>Working Experience</h2>
-    <h3>Data Analyst | Lyme Disease Associate of Australia</h3>
-    <p>Maintain, manage and ensure availability of the association’s website using WordPress CMS, Linux webservers and
-        MySQL
-        database.
-        • Maintain, manage and ensure availability of the association’s Gmail for Work email system.
-        • Support for online store maintenance and management through The PrintBar Australia platform.
-        • Maintain and manage Google Analytics including regular preparation of reports.
-        • Support the maintenance and management of social media profiles including regular preparation of reports.
-        • Maintain and manage the association’s SupporterHub email platform including assisting with development of
-        newsletters
-        and other campaigns when required.
-        • Manage electronic folders and cloud storage (e.g. Dropbox) and backup systems. Maintain and manage web and
-        email
-        hosting arrangements including domain names and issue and logging resolution with service provider.
-        • Research, implement and provide advice/support for novel initiatives including surveys, data collection and
-        analysis
-        and mapping.
-        • Provide advice on web-based technology and website management arrangements to support and improve the
-        association’s
-        arrangements.
-        • Provide support to the President, Executive Committee and other volunteers regarding system management.</p>
-    <h3>IT Support | Tuart Place</h3>
-    <p> - Promptly respond to IT-related inquiries and concerns from staff and elderly individuals, diagnosing and
-        resolving
-        technical
-        issues efficiently.
-        - Raise awareness and educate the elderly about the prevention of online scams and fraud, fostering a safer
-        online
-        environment. </p>
-    <h3>Service & Counter | IGA </h3>
-    <p> - provide delightful customer service.
-        - Product Preparation
-        - Promoted clean, organized, and inviting environment for customers </p>
-    <h2>Champ moments IRL</h2>
-    <h3>Catch a 2KG Octpus in Fremantle</h3>
 
+
+
+            <div class="row text-left">
+                <div class="container">
+                    <h3>Select Resume Section</h3>
+                    <select class="form-control" id="resumeSection">
+                        <option value="dataAnalyst">Data Analyst | Lyme Disease Associate of Australia</option>
+                        <option value="itSupport">IT Support | Tuart Place</option>
+                        <option value="serviceCounter">Service & Counter | IGA</option>
+                    </select>
+                    <div id="content" class="mt-3">
+                        <p id="dataAnalyst" class="resume">
+
+                            Maintain, manage and ensure availability of the association’s website using WordPress CMS,
+                            Linux
+                            webservers and MySQL database.<br>
+                            • Maintain, manage and ensure availability of the association’s Gmail for Work email
+                            system.<br>
+                            • Support for online store maintenance and management through The PrintBar Australia
+                            platform.<br>
+                            • Maintain and manage Google Analytics including regular preparation of reports.<br>
+                            • Support the maintenance and management of social media profiles including regular
+                            preparation of
+                            reports.<br>
+                            • Maintain and manage the association’s SupporterHub email platform including assisting with
+                            development of newsletters and other campaigns when required.<br>
+                            • Manage electronic folders and cloud storage (e.g. Dropbox) and backup systems. Maintain
+                            and manage
+                            web and email
+                            hosting arrangements including domain names and issue and logging resolution with service
+                            provider.<br>
+                            • Research, implement and provide advice/support for novel initiatives including surveys,
+                            data
+                            collection and analysis and mapping.<br>
+                            • Provide advice on web-based technology and website management arrangements to support and
+                            improve
+                            the association’s arrangements.<br>
+                            • Provide support to the President, Executive Committee and other volunteers regarding
+                            system
+                            management.
+                        </p>
+                        <p id="itSupport" class="resume" style="display: none;">
+                            • Promptly respond to IT-related inquiries and concerns from staff and elderly
+                            individuals,
+                            diagnosing and resolving technical issues efficiently.<br>
+                            • Raise awareness and educate the elderly about the prevention of online scams and
+                            fraud,
+                            fostering a safer online environment.
+                        </p>
+                        <p id="serviceCounter" class="resume" style="display: none;">
+                            • provide delightful customer service.<br>
+                            • Product Preparation<br>
+                            • Promoted clean, organized, and inviting environment for customers<br>
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="container" id="Reference">
+                    <h4>Reference:</h4>
+                    <span style="background-color: black;color: #00ffd2; padding: 3px;">Chat-GPT4</span>
+                    <span style="color: #ff003c ;">Learn new knogwledge like polygon underlining; modify html framework
+                        errors; debug</span>
+                    <p>
+                        <a href="https://www.youtube.com/watch?v=2ogJyn5gDkc"
+                            style="background-color: black;color: #00ffd2; padding: 3px;">https://www.youtube.com/watch?v=2ogJyn5gDkc</a>
+                        <span style="color: #ff003c ;">Add block element underline after heading</span>
+                    </p>
+                    <p>
+                        <a href="https://xfonts.pro/fonts/blender-pro_book"
+                            style="background-color: black;color: #00ffd2; padding: 3px;">https://xfonts.pro/fonts/blender-pro_book</a>
+                        <span style="color: #ff003c ;">Add block element underline after heading</span>
+                    </p>
+                    <p>
+                        <a href="https://www.youtube.com/watch?v=An5lxvYk1k"
+                            style="background-color: black;color: #00ffd2; padding: 3px;">https://www.youtube.com/watch?v=An5lxvYk1k</a>
+                        <span style="color: #ff003c ;">Clip-path, polygon learning</span>
+                    </p>
+                    <p>
+                        <a href="https://www.cyberpunk.net/au/en/"
+                            style="background-color: black; color: #00ffd2; padding: 3px;">
+                            https://www.cyberpunk.net/au/en/
+                        </a>
+                        <span style="color: #ff003c ;"> Cyberpunk2077 Offical Website,inspect css design(fonts;
+                            colors)</span>
+                    </p>
+                    <p>
+                        <a href="https://www.cyberpunk.net/au/en/"
+                            style="background-color: black; color: #00ffd2; padding: 3px;">
+                            Tomić, D. (2023). Influential Concepts: How Vannevar Bush's Memex and Ted Nelson's Hypertext
+                            Shaped
+                            Information Science
+                            and the Internet.
+                        </a>
+                    </p>
+                    <p>
+                        <a href=https://en.wikipedia.org/wiki/Project_Xanadu"
+                            style="background-color: black; color: #00ffd2; padding: 3px;">
+                            Project Xanadu
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://en.wikipedia.org/wiki/Ted_Nelson"
+                            style="background-color: black; color: #00ffd2; padding: 3px;">
+                            Ted_Nelson
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://dougengelbart.org/content/view/158/"
+                            style="background-color: black; color: #00ffd2; padding: 3px;">
+                            Doug Engelbart
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+                            style="background-color: black; color: #00ffd2; padding: 3px;">
+                            Bootstrap Doc
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://api.jquery.com/category/events/"
+                            style="background-color: black; color: #00ffd2; padding: 3px;">
+                            Ajax Doc
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://www.w3schools.com/w3css/w3css_examples.asp"
+                            style="background-color: black; color: #00ffd2; padding: 3px;">
+                            CSS Examples from w3shools
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://waifu.pics/docs"
+                            style="background-color: black; color: #00ffd2; padding: 3px;">
+                            https://waifu.pics/docs
+                        </a>
+                        <span style="color: #ff003c ;">An api for waifu pics
+                        </span>
+                    </p>
+                </div>
+
+
+
+
+
+
+        </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script>
+        // Change my daily photos
+        //run function after doc has loaded
+        $(document).ready(function () {
+            //The images array and start from 0
+            var images = ["champ1.jpeg", "champ2.jpg", "champ3.jpg", "champ4.jpg", "champ5.jpg"];
+            var currentImageIndex = 0;
+            // Function to change image
+            function changeImage() {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                // Change src attribute 
+                $('#currentImg').attr('src', images[currentImageIndex]);
+            }
+            // Interval every 2 seconds
+            setInterval(changeImage, 2000);
+            // Click button then next pic
+            $('#nextImage').click(function () {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                $('#currentImg').attr('src', images[currentImageIndex]);
+            });
+        });
+
+        //Waifu
+        document.getElementById('loadWaifu').addEventListener('click', function () {
+            fetch('https://api.waifu.pics/sfw/neko')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('waifuImage').src = data.url;
+                })
+                .catch(error => console.error('Error fetching data', error))
+        })
+        //Change my waifu for each 2 seconds
+        document.addEventListener('DOMContentLoaded', function () {
+            const imageUrl = 'https://api.waifu.pics/sfw/neko';
+            const imageElement = document.getElementById('waifuImage');
+            function fetchWaifuImage() {
+                fetch(imageUrl)
+                    .then(response => response.json())
+                    .then(data => {
+                        imageElement.src = data.url;
+                    })
+                    .catch(error => console.error('Error fetching data:', error));
+            }
+
+            fetchWaifuImage();
+            setInterval(fetchWaifuImage, 2000);
+        });
+
+        //
+        $(document).ready(function () {
+            // Event listener for my resume section
+            $('#resumeSection').change(function () {
+                //Hide everything first, then show the one i pick
+                $('.resume').hide();
+                $('#' + $(this).val()).show();
+            });
+        });
+    </script>
 </body>
+<footer>
+    © 2024 Weisi Zhang SID(23210735). All rights reserved. :|
+</footer>
 
 </html>

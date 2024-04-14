@@ -2,68 +2,83 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"> <!-- 设置文档的字符编码为UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 视口设置为设备宽度，缩放比例为1 -->
-    <title>Weisi Zhang</title> <!-- 网页标题 -->
-    <!-- 引入Bootstrap的CSS文件 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hyperklinks - Weisi </title>
+    <!-- Link to bootstrap & my CSS file -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-    <div class="container mt-5"> <!-- container类用于居中和边距管理，mt-5为上边距 -->
-        <header class="mb-4"> <!-- header部分，mb-4为下边距 -->
-            <h1>Hyperlinks Concept</h1> <!-- 主标题 -->
+    <div class="container mt-5"> <!--leave some space between ceiling -->
+
+        <header class="mb-4"> <!--leave some space between main content-->
+            <!--Header and hyperlink navigation to each page-->
+            <h1>Hyperlinks Concept</h1>
+            <nav>
+                <a href="/main.html" target="_blank" style="color: white;">
+                    Main_Page
+                </a> |
+                <a href="/Hyperlinks_concept.html" target="_blank " style="color: white;">
+                    Hyperlinks_Concept
+                </a> |
+                <a href=" /main.html" target="_blank" style="color: white;">
+                    History_of_Hyperlinks
+                </a> |
+                <a href="/Biography.html" target="_blank" style="color: white;">
+                    About_me
+                </a>
+            </nav>
         </header>
-        <nav> Main Page About me History of Hyperlinks Biography</nav>
+
         <main>
             <div class="row">
                 <h3>What is hyperlink?</h3>
             </div>
-            <div class="row"> <!-- 使用row类定义一行，用于布局控制 -->
-                <div class="col-6 text-left"> <!-- col-6定义列宽占总宽度的50%，用于文本 -->
+            <div class="row">
+                <div class="col-6 text-left"> <!-- 50% of space for text -->
                     <p>Hyperlinks, commonly known as links, serve as navigational gateways, allowing users to click and
                         move to different pieces of digital content. Think of a hyperlink as a bridge connecting one bit
                         of information to another. The linked text, often highlighted, is called anchor text, and it’s
-                        what you click to jump to the linked content.</p>
-                    <p>Hypertext is simply text laced with these links. With the right software, you can view and create
-                        this web of connections. When you click on a link, you're taking a path through this web,
+                        what we click to jump to the linked content.</p>
+                    <p>Hypertext is simply text laced with these links. With the right software, we can view and create
+                        this web of connections. When we click on a link, we're taking a path through this web,
                         exploring connected information.</p>
                 </div>
-                <div class="col-6"> <!-- col-6定义另一半宽度，用于图片 -->
+                <div class="col-6"> <!-- 50% for pic -->
                     <img src="Hyperlink1.jpg" alt="Cannot load img successfully" class="img-fluid" width=80% height=80%>
-                    <!-- 引入图片，img-fluid使图片响应式 -->
                 </div>
             </div>
-            <div class="row"> <!--这里第二块内容-->
-                <div class="col-6"> <!--这里塞入银翼杀手视频 interlink!!-->
+            <div class="row">
+                <div class="col-6"> <!--50% for BladeRunner Video -->
                     <video width=100% height=100% controls loop>
                         <source src="interlinked.mp4" type="video/mp4">
                     </video>
                 </div>
-                <div class="col-6 text-left">
+                <div class="col-6 text-left"> <!-- Rest 50% for text content-->
                     <p>
-                        Consider the text you read online, like on Wikipedia or Google Search. Words within the text
+                        Consider the text we read online, like on Wikipedia or Google Search. Words within the text
                         might be linked to
                         other pages explaining them in detail. Links are the building blocks of digital references,
                         often found in
                         contents pages, glossaries, and bibliographies, creating a network of information.
                     </p>
                     <p>
-                        Some links are two-way streets — you can go back and forth between the linked content. Others
+                        Some links are two-way streets — we can go back and forth between the linked content. Others
                         form a more
                         intricate map, allowing multiple paths to and from various pieces of information.
                     </p>
 
                 </div>
-            </div> <!-- 这里塞入第二段文字-->
+            </div> <!--More text content here -->
             <div class="row text-left">
                 <p>
-                    On the web, clicking a link usually means the new page will load where you are, although
+                    On the web, clicking a link usually means the new page will load where we are, although
                     sometimes a link might
-                    open a new tab or window. Some links might even bring in content right where you are, seamlessly
+                    open a new tab or window. Some links might even bring in content right where we are, seamlessly
                     integrating new
-                    information into your current view.
+                    information into our current view.
                 </p>
                 <p>
                     Automated programs like web crawlers also use hyperlinks to navigate and index the web, creating
@@ -76,7 +91,7 @@
                     piece of content to another, building our understanding and knowledge as we go.
                 </p>
             </div>
-
+            <!--Second Part-->
             <div class="row">
                 <h3>The Role of Anchor Tags in Hyperlinks</h3>
             </div>
@@ -90,7 +105,7 @@
                     </p>
                     <p>Hyperlinks are akin to digital synapses, connecting discrete blocks of information to form a
                         cohesive, navigable
-                        structure. When you encounter an <a> tag, it's not just a link — it's an invitation to explore.
+                        structure. When we encounter an <a> tag, it's not just a link — it's an invitation to explore.
                             The
                             href
                             attribute within it holds the URL, a unique address leading to endless knowledge and
@@ -112,7 +127,7 @@
             </div>
             <div class="row text-left">
                 <p>Furthermore, the design and behavior of hyperlinks can be enriched using CSS and JavaScript. CSS lets
-                    you style
+                    us style
                     hyperlinks to match the aesthetic of the website, be it through color, font, or animation.
                     JavaScript, on the
                     other
@@ -127,7 +142,7 @@
                 <p>
                     Through these interactive layers, the <a> tag transcends its basic function, becoming an integral
                         part of the
-                        user's journey through your digital content. It is the starting point of their adventure, the
+                        user's journey through our digital content. It is the starting point of their adventure, the
                         conduit
                         through which they engage with the content, and the guidepost leading them to their next
                         destination. In
@@ -138,28 +153,29 @@
                         lead.
                 </p>
             </div>
+            <!-- Third part -->
             <div class="row">
                 <h4>For example:</h4>
             </div>
             <div class="row text-left">
                 <ul>
                     <li>
-                        Linking to an external site: <a href="https://www.example.com">Visit Example.com</a></li>
+                        Linking to an external site: <a href="https://www.youtube.com">Visit YouTube</a></li>
                     <li>
-                        <Navigating to an internal page: <a href="/about.html">About Us</a>
+                        Navigating to an internal page: <a href="Biography.html">About Me</a>
                     </li>
                     <li>
-                        Jumping to a page section: <a href="#contact">Jump to Contact Section</a>
+                        Jumping to a page section: <a href="#Reference">Jump to Reference Section</a>
                     </li>
                 </ul>
             </div>
-
+            <!-- 4th part -->
             <div class="row">
                 <h3>HTTP Requests: The invisible Handshake</h3>
             </div>
             <div class="row">
                 <div class="col-12 text-left">
-                    <p>When you click a hyperlink, you initiate what's called an HTTP GET request. This process is like
+                    <p>When we click a hyperlink, we initiate what's called an HTTP GET request. This process is like
                         a friendly
                         exchange
                         where the browser (acting on behalf of the user) reaches out to the server hosting the linked
@@ -226,7 +242,7 @@
                     from one resource to another across the internet.
                 </p>
             </div>
-
+            <!--5th part-->
             <div class="row">
                 <h3>Bring Links to Life with JavaScript and jQuery</h3>
             </div>
@@ -239,16 +255,16 @@
             <div class="row text-left">
                 <ul>
                     <li>
-                        <strong>Dynamic Interactivity:</strong> JavaScript allows you to modify hyperlink behavior
+                        <strong>Dynamic Interactivity:</strong> JavaScript allows us to modify hyperlink behavior
                         dynamically. For
-                        example, you can set up
+                        example, we can set up
                         scripts so that when users hover over a link, they see more detailed information about where the
                         link will
                         take them
                         without leaving the page.
                     </li>
                     <li>
-                        <strong>AJAX for Seamless Experiences:</strong> (Asynchronous JavaScript and XML) lets you fetch
+                        <strong>AJAX for Seamless Experiences:</strong> (Asynchronous JavaScript and XML) lets us fetch
                         content
                         from a server and update
                         parts of a web page without reloading the whole page. This technique is essential for creating
@@ -265,12 +281,19 @@
                 <h4>Example of AJAX with jQuery</h4>
             </div>
             <div class="row text-left">
-                <p>$('a.myLink').click(function(event){
-                    event.preventDefault(); // Prevent the default hyperlink action
-                    var loadURL = $(this).attr('href'); // Extract the URL from the link
-                    $('#contentArea').load(loadURL); // Load the content into a specific part of the page
-                    });
-                </p>
+                <!--write some css style for code chunk example here -->
+                <div style="background-color: #333;color:  cyan; padding: 1%;">
+                    <p>$('a.myLink').click(function(event){<br>
+                        event.preventDefault();<span style="color: #ff003c;"> // Prevent the default hyperlink
+                            action</span><br>
+                        var loadURL = $(this).attr('href');<span style="color: #ff003c;"> // Extract the URL from the
+                            link</span><br>
+                        $('#contentArea').load(loadURL);<span style="color: #ff003c;">// Load the content into a
+                            specific part of the page</span> <br>
+                        });
+                    </p>
+                </div>
+
                 <p>This script prevents the default link action, fetches the content from the link's href, and loads
                     that content
                     into a
@@ -285,8 +308,93 @@
                     what makes
                     modern web development so dynamic and responsive to user needs.</p>
             </div>
+
+
         </main>
     </div>
+    <div class="container" id="Reference">
+        <h4>Reference:</h4>
+        <span style="background-color: black;color: #00ffd2; padding: 3px;">Chat-GPT4</span>
+        <span style="color: #ff003c ;">Learn new knogwledge like polygon underlining; modify html framework
+            errors; debug</span>
+        <p>
+            <a href="https://www.youtube.com/watch?v=2ogJyn5gDkc"
+                style="background-color: black;color: #00ffd2; padding: 3px;">https://www.youtube.com/watch?v=2ogJyn5gDkc</a>
+            <span style="color: #ff003c ;">Add block element underline after heading</span>
+        </p>
+        <p>
+            <a href="https://xfonts.pro/fonts/blender-pro_book"
+                style="background-color: black;color: #00ffd2; padding: 3px;">https://xfonts.pro/fonts/blender-pro_book</a>
+            <span style="color: #ff003c ;">Add block element underline after heading</span>
+        </p>
+        <p>
+            <a href="https://www.youtube.com/watch?v=An5lxvYk1k"
+                style="background-color: black;color: #00ffd2; padding: 3px;">https://www.youtube.com/watch?v=An5lxvYk1k</a>
+            <span style="color: #ff003c ;">Clip-path, polygon learning</span>
+        </p>
+        <p>
+            <a href="https://www.cyberpunk.net/au/en/" style="background-color: black; color: #00ffd2; padding: 3px;">
+                https://www.cyberpunk.net/au/en/
+            </a>
+            <span style="color: #ff003c ;"> Cyberpunk2077 Offical Website,inspect css design(fonts;
+                colors)</span>
+        </p>
+        <p>
+            <a href="https://www.cyberpunk.net/au/en/" style="background-color: black; color: #00ffd2; padding: 3px;">
+                Tomić, D. (2023). Influential Concepts: How Vannevar Bush's Memex and Ted Nelson's Hypertext
+                Shaped
+                Information Science
+                and the Internet.
+            </a>
+        </p>
+        <p>
+            <a href=https://en.wikipedia.org/wiki/Project_Xanadu"
+                style="background-color: black; color: #00ffd2; padding: 3px;">
+                Project Xanadu
+            </a>
+        </p>
+        <p>
+            <a href="https://en.wikipedia.org/wiki/Ted_Nelson"
+                style="background-color: black; color: #00ffd2; padding: 3px;">
+                Ted_Nelson
+            </a>
+        </p>
+        <p>
+            <a href="https://dougengelbart.org/content/view/158/"
+                style="background-color: black; color: #00ffd2; padding: 3px;">
+                Doug Engelbart
+            </a>
+        </p>
+        <p>
+            <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+                style="background-color: black; color: #00ffd2; padding: 3px;">
+                Bootstrap Doc
+            </a>
+        </p>
+        <p>
+            <a href="https://api.jquery.com/category/events/"
+                style="background-color: black; color: #00ffd2; padding: 3px;">
+                Ajax Doc
+            </a>
+        </p>
+        <p>
+            <a href="https://www.w3schools.com/w3css/w3css_examples.asp"
+                style="background-color: black; color: #00ffd2; padding: 3px;">
+                CSS Examples from w3shools
+            </a>
+        </p>
+        <p>
+            <a href="https://waifu.pics/docs" style="background-color: black; color: #00ffd2; padding: 3px;">
+                https://waifu.pics/docs
+            </a>
+            <span style="color: #ff003c ;">An api for waifu pics
+            </span>
+        </p>
+
+    </div>
 </body>
+<footer>
+    © 2024 Weisi Zhang SID(23210735). All rights reserved. :|
+</footer>
 
 </html>
